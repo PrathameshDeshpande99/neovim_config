@@ -329,17 +329,6 @@ return { -- LSP Configuration & Plugins
                 -- capabilities = require('cmp_nvim_lsp').default_capabilities(),
                 settings = {},
             },
-            svls = {
-                settings = {
-                    systemverilog = {
-                        -- you can put extra config here if needed
-                        -- e.g., include directories:
-                        -- includeIndexing = { "src/**/*.sv", "include/**/*.svh" },
-                        -- defines = { "SYNTHESIS", "SIMULATION" },
-                    },
-                },
-                filetypes = { 'verilog', 'systemverilog' },
-            },
             marksman = {},
             prismals = {},
             gopls = {
@@ -370,7 +359,6 @@ return { -- LSP Configuration & Plugins
                     executeCommands = true,
                 },
             },
-            asm_lsp = {},
         }
 
         -- Ensure the servers and tools above are installed

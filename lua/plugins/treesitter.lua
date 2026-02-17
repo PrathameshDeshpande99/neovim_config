@@ -1,30 +1,26 @@
-return {
-  "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-
+return { -- Highlight, edit, and navigate code
+  'nvim-treesitter/nvim-treesitter',
   config = function()
     local filetypes = {
-      "lua", "vim", "vimdoc", "query",
-      "c", "cpp", "rust", "go",
-      "html", "css",
-      "javascript", "typescript", "tsx",
-      "json",
-      "python",
-      "java", "kotlin",
-      "bash", "dockerfile",
-      "yaml", "toml",
-      "markdown", "markdown_inline",
-      "sql",
+      -- Core Neovim & Config
+      'lua', 'luadoc', 'vim', 'vimdoc', 'query', 'toml', 'yaml', 'json',
+
+      -- Web Development
+      'html', 'css', 'javascript', 'typescript', 'tsx', 'jsdoc',
+
+      -- Programming Languages (CSE Essentials)
+      'python', 'c', 'cpp', 'rust', 'go', 'java', 'kotlin',
+
+      -- Shell & DevOps
+      'bash', 'dockerfile', 'make', 'cmake',
+
+      -- Data & Documentation
+      'sql', 'markdown', 'markdown_inline', 'diff', 'regex', 'git_config', 'gitignore'
     }
-
-    require("nvim-treesitter").install(filetypes)
-
-    vim.api.nvim_create_autocmd("FileType", {
+    require('nvim-treesitter').install(filetypes)
+    vim.api.nvim_create_autocmd('FileType', {
       pattern = filetypes,
-      callback = function()
-        vim.treesitter.start()
-      end,
+      callback = function() vim.treesitter.start() end,
     })
   end,
 }
-
