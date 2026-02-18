@@ -6,7 +6,7 @@ return { -- Highlight, edit, and navigate code
       'lua', 'luadoc', 'vim', 'vimdoc', 'query', 'toml', 'yaml', 'json',
 
       -- Web Development
-      'html', 'css', 'javascript', 'typescript', 'tsx', 'jsdoc',
+      'html', 'css', 'javascript', 'typescript', 'tsx', 'jsdoc', 'javascriptreact',
 
       -- Programming Languages (CSE Essentials)
       'python', 'c', 'cpp', 'rust', 'go', 'java', 'kotlin',
